@@ -10,7 +10,7 @@ All orbits are created using pure CSS animations — no JavaScript involved!
 
 ## 🚀 Demo
 
-![Solar System Preview](https://raw.githubusercontent.com/your-username/solar-system-animation/main/preview.gif)
+![Solar System Preview](https://dhanyasri7.github.io/earth-moon-sun/)
 
 
 ## 📁 Files
