@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background-color: #000;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solar-system {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/* Sun stays centered */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px 10px rgba(255, 200, 0, 0.8);
+  z-index: 2;
+}
+
+/* Earth rotates around Sun */
+/* EARTH ORBIT AROUND SUN (Already working fine) */
+.earth-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+  animation: rotate-earth 10s linear infinite;
+}
+
+/* EARTH */
+.earth {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* MOON ORBIT AROUND EARTH */
+.moon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px; /* distance from earth */
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  animation: rotate-moon 2s linear infinite;
+}
+
+/* MOON */
+.moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transform: translateX(-40%);
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes rotate-earth {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-moon {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
